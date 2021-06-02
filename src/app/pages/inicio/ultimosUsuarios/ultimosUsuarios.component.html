@@ -1,0 +1,64 @@
+<div class="card card-custom">
+    <!-- Header -->
+    <div class="card-header border-0 py-5">
+        <h3 class="card-title align-items-start flex-column">
+            <span class="card-label font-weight-bolder text-dark">Ultimos Usuarios Registrados</span>
+            <span class="text-muted mt-3 font-weight-bold font-size-sm">Nuevos lectores de la comunidad</span
+>
+        </h3>
+
+    </div>
+    <!--begin::Body-->
+    <div class="card-body py-0">
+        <!--begin::Table-->
+        <div class="table-responsive">
+            <table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_1">
+                <thead>
+                    <tr class="text-left">
+                        <th class="pl-0" style="width: 20px"></th>
+                        <th class="pr-0" style="width: 50px">Usuario</th>
+                        <th style="min-width: 200px"></th>
+                        <th style="min-width: 150px">Intereses</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of resultado">
+                        <td class="pl-0"><span></span></td>
+                        <td class="pr-0">
+                            <div class="symbol symbol-50 symbol-light mt-1">
+                                <div class="symbol-label" style="background-image: url('./assets/media/users/{{usuario.imagen}}'); "></div>
+                            </div>
+                        </td>
+                        <td class="pl-0">
+                            <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">{{usuario.nombreUsuario}}</a
+      >
+      <span class="text-muted font-weight-bold text-muted d-block"
+        >{{usuario.presentacion}}</span
+      >
+    </td>
+    <td>
+        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
+        <span [inlineSVG]="'./assets/media/svg/icons/Libroteca/'+usuario.interes1+'.svg'"class="svg-icon svg-icon-md svg-icon-primary"></span>
+      </a>
+                            <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                <span [inlineSVG]="'./assets/media/svg/icons/Libroteca/'+usuario.interes2+'.svg'" class="svg-icon svg-icon-md svg-icon-primary"></span>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
+                                <div class="my-icon" aria-label="My icon" [inlineSVG]="'./assets/media/svg/'+usuario.interes3+'.svg'"></div>
+                            </a>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td class="pr-0 text-right">
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--end::Table-->
+    </div>
+    <!--end::Body-->
+</div>

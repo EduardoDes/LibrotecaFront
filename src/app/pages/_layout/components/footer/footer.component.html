@@ -1,0 +1,22 @@
+<!-- compact -->
+<ng-container *ngIf="footerLayout === 'compact'">
+    <!--begin::Container-->
+    <div [ngClass]="footerContainerCSSClasses" class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <!--begin::Copyright-->
+        <div class="text-dark order-2 order-md-1">
+            <span class="text-muted font-weight-bold mr-2">{{ currentYear }} &copy;</span
+      >
+      <a
+        href="http://keenthemes.com/metronic"
+        target="_blank"
+        class="text-dark-75 text-hover-primary"
+        >Libroteca</a
+      >
+    </div>
+    <!--end::Copyright-->
+
+    <!--end::Nav-->
+  </div>
+  <!--end::Container-->
+</ng-container>
+<!-- extended -->

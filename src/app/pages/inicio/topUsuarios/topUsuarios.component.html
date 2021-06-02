@@ -1,0 +1,37 @@
+<div class="card card-custom">
+    <!-- Header -->
+    <div class="card-header border-0 pt-5">
+        <div class="card-title">
+            <div class="card-label">
+                <div class="font-weight-bolder">Top Usuarios</div>
+            </div>
+        </div>
+    </div>
+    <!-- Body -->
+    <div class="card-body d-flex flex-column px-0">
+        <!--end::Chart-->
+        <!--begin::Items-->
+        <div class="flex-grow-1 card-spacer-xflex-grow-1 card-spacer-x">
+            <!--begin::Item-->
+            <div *ngFor="let usuario of resultado" class="d-flex align-items-center justify-content-between mb-10">
+                <div class="d-flex align-items-center mr-2">
+                    <div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
+                        <div class="symbol-label">
+                            <div class="symbol-label" style="background-image: url('./assets/media//users/{{usuario.imagen}}'); "></div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">{{usuario.nombreUsuario}}</a>
+
+                    </div>
+                </div>
+                <div class="label label-light label-inline font-weight-bold text-dark-50 py-4 px-3 font-size-base">
+                    {{usuario.totalPaginas}} Paginas Leidas
+                </div>
+            </div>
+            <!--end::Item-->
+
+        </div>
+        <!--end::Stats-->
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<!--begin::Profile Overview-->
+<div class="d-flex flex-row">
+    <!--begin::Aside-->
+    <div class="flex-row-auto offcanvas-mobile w-300px w-xl-350px">
+
+
+        <div class="card card-custom card-stretch">
+
+            <div class="card-body pt-4">
+                <div>
+                    <div class="symbol symbol-200 ">
+                        <div class="symbol-label" style="background-image: url('./assets/media/books/{{resultado.imagenLibro}}'); width: 170px; height: 270px;"></div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div style="margin-top: 10%;">
+                        <a class="font-weight-bolder font-size-h5 text-dark-75 text-hover-primary cursor-pointer">
+                           {{resultado.nombreLibro}}
+                       </a>
+                        <div class="text-muted">
+                            {{resultado.autorLibro}}
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 10%;">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="font-weight-bold mr-2">Genero:</span>
+                        <a class="text-muted text-hover-primary">{{resultado.generoLibro}}</a>
+                    </div>
+
+                </div>
+                <div style="margin-top: 10%;">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="font-weight-bold mr-2">Paginas:</span>
+                        <a class="text-muted text-hover-primary">{{resultado.paginas}}</a>
+                    </div>
+
+                </div>
+                <div style="margin-top: 10%;">
+                    <span class="font-weight-bold mr-2">Reseña:</span>
+                    <div class="d-flex align-items-center justify-content-between mb-2" style="margin-top: 2%;">
+
+                        <p class="text-muted"><em>{{resultado.resegna}}</em></p>
+                    </div>
+
+                </div>
+
+                <!--end::Nav-->
+            </div>
+            <!--end::Body-->
+        </div>
+
+
+        <!--end::Profile Card-->
+
+    </div>
+
+    <div class="card card-custom card-stretch" style="margin-left: 2%;">
+
+        <div class="card-header border-0 pt-5">
+            <div class="card-title">
+                <div class="card-label">
+                    <div class="font-weight-bolder">Valoraciones y opiniones</div>
+                </div>
+            </div>
+        </div>
+        <!-- Body -->
+        <div class="card-body d-flex flex-column px-0" style="width: 900px;">
+            <!--end::Chart-->
+            <!--begin::Items-->
+            <div *ngFor="let comentarioLibro of resultadoLibros" class="flex-grow-1 card-spacer-xflex-grow-1 card-spacer-x">
+                <!--begin::Item-->
+                <div class="d-flex align-items-center justify-content-between mb-10">
+                    <div class="d-flex align-items-center mr-2">
+                        <div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
+                            <div class="symbol-label">
+                                <div class="symbol-label" style="background-image: url('./assets/media/users/{{comentarioLibro.imagen}}'); "></div>
+                            </div>
+                        </div>
+                        <div class="label label-light label-inline font-weight-bold text-dark-50 py-4 px-3 font-size-base" style="margin-right: 2%;">
+                            <i class="fa fa-star" style="color: #ffd700;">{{comentarioLibro.puntuacion}}</i>
+                        </div>
+                        <div>
+                            <a class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">{{comentarioLibro.nombreUsuario}}</a>
+                            <div class="font-size-sm text-muted font-weight-bold mt-1">
+                                {{comentarioLibro.comentario}}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--end::Item-->
+                <!--begin::Item-->
+
+                <!--end::Item-->
+            </div>
+            <!--end::Stats-->
+        </div>
+        <!--end::Body-->
+    </div>
+
+</div>
+<!--end::Profile Overview-->

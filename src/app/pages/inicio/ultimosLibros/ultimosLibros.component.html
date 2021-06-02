@@ -1,0 +1,36 @@
+<div class="card card-custom">
+    <!-- Header -->
+    <div class="card-header border-0 pt-5">
+        <div class="card-title">
+            <div class="card-label">
+                <div class="font-weight-bolder">Ultimos Libros Agregados</div>
+            </div>
+        </div>
+    </div>
+    <!-- Body -->
+    <div class="card-body d-flex flex-column px-0">
+        <!--end::Chart-->
+        <!--begin::Items-->
+        <div class="flex-grow-1 card-spacer-xflex-grow-1 card-spacer-x">
+            <!--begin::Item-->
+            <div *ngFor="let libro of resultados" class="d-flex  justify-content-between mb-10">
+                <div class="d-flex  mr-2">
+                    <div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
+                        <div class="symbol-label">
+                            <div class="symbol-label" style="background-image: url('./assets/media/books/{{libro.imagen}}'); "></div>
+                        </div>
+                    </div>
+                    <div>
+                        <a routerLink="/libros/{{libro.idLibro}}" routerLinkActive="active" class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">{{libro.nombreLibro}} - {{libro.autorLibro}}</a>
+                        <div class="font-size-sm text-muted font-weight-bold mt-1">
+                            {{libro.resegna}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end::Item-->
+        </div>
+        <!--end::Stats-->
+    </div>
+
+</div>
